@@ -1,6 +1,6 @@
 \documentclass{article}
 
-\title{Truth and Beauty Bux: Towards a Sane Cryptocurrency} 
+\title{Truth and Beauty Bux: Towards Sane Uses of Cryptocurrency} 
 
 \author{Eric Purdy \\ Your Name Here (contributions welcome!)}
 
@@ -8,82 +8,59 @@
 
 \maketitle
 
-In this document, we briefly lay out a scheme for creating a new
-cryptocurrency that does not suffer from the drawbacks of all existing
-cryptocurrencies.
+In this document, we briefly lay out a variety of schemes for using
+cryptocurrency that alleviate a number of the drawbacks of all
+existing cryptocurrencies. We intend to implement these schemes on top
+of the upcoming Thunder Token cryptocurrency, as Thunder Token seems
+to be provably secure, easy to develop on (as it is planned to be
+interoperable with Ethereum) and as environmentally friendly as any
+cryptocurrency can be.
 
-\section{Introduction}
+\section{Introduction: What is Wrong with Cryptocurrency Today?}
 
-Design goals for our cryptocurrency:
-\begin{itemize}
-\item Do not encourage speculation; rather, tether the currency to a
-  traditional fiat currency, preferably the US dollar.
-\item Do not remove value from the traditional economy; rather,
-  encourage investment in the traditional economy through traditional
-  avenues of investment such as mutual funds that are subject to
-  traditional regulation via e.g. the SEC
-\item Do not create any powerful institutions that are liable to
-  become corrupt (this was in our estimation the failure mode of the
-  Tether (USDT) cryptocurrency); rather, create an ecosystem of
-  institutions that are at most as powerful as is required to do their
-  job, and incentive structures that encourage such necessary
-  institutions to be transparent, honest, and straightforward, both by
-  designing incentives into the software of the cryptocurrency, but
-  more importantly, by invoking existing legal and regulatory
-  structures and institutions
-\item Encourage routine transparency in dealings so that people can
-  choose to make it easier for the government to combat illegal
-  transactions and money laundering, without giving up their right to
-  privacy when they desire it
-\item Use a proof-of-work that serves a real human need, specifically
-  content distribution and artists rights management:
-  \begin{itemize}
-    \item Augment the BitTorrent protocol with extensions that make it
-      possible to safeguard artist's rights to be paid for the work
-      they create
-    \item Do so without enforcing odious Digital Rights Management
-      restrictions on what computations people are allowed to run on
-      their own computers
-    \item Solve the free-rider problem that plagues existing
-      BitTorrent networks by incorporating micropayments for serving
-      files
-  \end{itemize}
-\item Use a tangle-based protocol in order to address both scaling
-  issues and environmental concerns
-\item Allow some blockchain verification to be done off the global
-  tangle as a proof-of-work; this enables the blockchain protocol to
-  scale almost indefinitely, cuts down on storage needs, and also
-  helps to address environmental concerns
-\item Address all potential concerns with the protocol using rigorous,
-  testable computer science to validate all theoretical assumptions
-  that underlie the security of the cryptocurrency
-\item To the extent that an untethered host cryptocurrency such as
-  Ethereum or IOTA is necessary to power the fiat-tethered
-  cryptocurrency that we envision, encourage a healthy, automated
-  market-making system that rewards all network participants who
-  provide liquidity, rather than rewarding savvy individuals who know
-  how to model other participants and take advantage of them.
-\end{itemize}
+First, we lay out a number of objections to cryptocurrency, and note
+briefly how we think they are best addressed.
 
-\section{What Platform Should We Use?}
+\subsection{Cryptocurrencies Encourage Speculation}
 
-Our current thinking is to build a very lousy prototype of Truth and
-Beauty Bux on top of the Ethereum blockchain, in order to validate the
-market potential of the protocol on a mature and well-tested platform,
-before moving to a tangle-based blockchain in order to maximize
-throughput and minimize environmental externalities. This decision is
-subject to revision, though, since e.g. the IOTA blockchain is
-relatively mature.
+Existing cryptocurrencies have largely benefited technically savvy
+people with the mathematical and programming expertise required to
+take advantage of less savvy participants, all while creating little
+to nothing of real value. Large-scale price swings have enriched some
+and devestated others, largely with no rhyme or reason. Clearly, the
+root of the price swings is that cryptocurrencies have historically
+sought to separate themselves from traditional, stable fiat currencies
+that have widespread adoption and a clear value proposition.
 
-A cursory glance at the IOTA blockchain suggests that tangle-based
-cryptocurrencies are not thought to be capable of enforcing accurate
-timestamps without some additional footwork, thus potentially
-rendering them inappropriate for smart contracts. This seems
-irrelevant to the problem of Truth and Beauty Bux, however, as we do
-not anticipate needing to have trusted, perfect timestamps for any of
-our use cases. It is a limitation to keep in mind, however.
+The only obvious solution to these problems is to tether
+cryptocurrencies to a stable fiat currency whenever possible, which
+brings us to our second point:
 
-\section{How Do We Implement An Honest Tether?}
+\subsection{Tethered Cryptocurrencies Are Bullshit}
+
+The existing tethered cryptocurrencies rely (supposedly!) on a promise
+to bank vast quantities of the fiat currency and produce it upon
+demand. These promises have proven to be a lie. The market may not
+care that these promises are a lie, but it is clear that the
+temptation to lie about such a thing is too great to resist.
+
+Fundamentally, the promise to bank large quantites of fiat currency
+and then produce them upon demand is insane and counterproductive. It
+removes capital from the traditional economy while fueling the
+cryptocurrency bubble. It is much wiser to invest fiat currency
+backing tethered cryptocurrency in the traditional economy through
+traditional avenues of investment such as mutual funds that are
+subject to traditional regulation via e.g. the SEC.
+
+We should not create any powerful institutions that are liable to
+become corrupt (this was in our estimation the failure mode of the
+Tether (USDT) cryptocurrency); rather, we should create an ecosystem
+of institutions that are at most as powerful as is required to do
+their job, and incentive structures that encourage such necessary
+institutions to be transparent, honest, and straightforward, both by
+designing incentives into the software of the cryptocurrency, but more
+importantly, by invoking existing legal and regulatory structures and
+institutions where appropriate.
 
 Fundamentally, we believe that Tether (USDT) failed because it tried
 to do something for which the incentives to be honest were too low,
@@ -107,7 +84,10 @@ choose to waive the waiting period when the cryptocurrency markets
 were not losing their minds, in order to compete for the loyalty of
 their customers by providing added convenience.
 
-\section{Transparency}
+\subsection{Cryptocurrencies Facilitate Illegal Transactions}
+
+Cryptocurrencies routinely facilitate illegal transactions. This is
+their primary value proposition to date. 
 
 We believe that routine, voluntary transparency in dealings will
 enable the government to do its job more easily without curtailing
@@ -125,23 +105,32 @@ exchange for the voluntary, routine transparency that this particular
 cryptocurrency encourages. Ultimately, if the state-level actors
 choose to enforce unjust laws (such as the prohibition of sales of
 non-addictive drugs with religious or therapeutic uses, such as
-hallucinogens or MDMA; or (arguably?) the prohibition of currency
-transfers out of China), and the voluntary, routine transparency
+hallucinogens or MDMA), and the voluntary, routine transparency
 becomes less routine, the state-level actors will have only themselves
 to blame.
 
-\section{The Proof of Useful Work}
+In practical terms, this is simply an argument for signing some
+transactions with cryptographic keys registered with the government
+under a particular citizen's name and tax identification information.
 
-We anticipate two forms of proof of work. The first is distributing
-artistic and informational content. The second is verifying the
-integrity of tangle fragments that are not published to the global
-tangle.
+\subsection{Cryptocurrency Has No Use Case}
 
-Ultimately, it probably makes more sense to use a proof-of-stake based
-tangle, since that is generally considered to be superior from an
-environmental and scaling perspective.
+This is a commonly cited argument, but we find it to be
+uncompelling. If we want a use case for cryptocurrency, we need look
+no further than file-sharing protocols such as BitTorrent:
 
-\subsection{Distributing Aristic and Informational Content}
+Specifically, we hope to do the following:
+\begin{itemize}
+\item Augment the BitTorrent protocol with extensions that make it
+  possible to safeguard artist's rights to be paid for the work
+  they create
+\item Do so without enforcing odious Digital Rights Management
+  restrictions on what computations people are allowed to run on
+  their own computers
+\item Solve the free-rider problem that plagues existing
+  BitTorrent networks by incorporating micropayments for serving
+  files
+\end{itemize}
 
 We anticipate transposing the current illegal BitTorrent networks to a
 completely legal and honorable method for distributing artistic
@@ -172,27 +161,37 @@ How do we use content distribution as a proof-of-work? This is
 actually a fairly interesting thing. We postulate that nodes
 participating in the modified BitTorrent protocol will receive an
 encrypted file block and a nonce called the ``challenge'' that is
-associated with the tangle nodes that they are extending. They will
-then publish a new tangle node that includes a hash of {\em the
+associated with the blockchain nodes that they are extending. They
+will then publish a new tangle node that includes a hash of {\em the
   concatenation of the content of the encrypted file block with the
   challenge}. It is therefore not super useful to counterfeit such
-tangle nodes, because anyone who has a copy of the encrypted file
+blockchain nodes, because anyone who has a copy of the encrypted file
 block in question and copies of the relevant global tangle nodes can
 check your work. Presumably large actors with financial interests in
 the integrity of the blockchain would simply mirror vast swathes of
 encrypted content and check all nodes in the global tangle.
 
-\subsection{Verifying the Integrity of the Blockchain}
 
-Finally, we note that a tangle-based cryptocurrency can be made more
-efficient by hosting the majority of nodes off of the global
-tangle. The idea here is that network actors who have built up some
-level of trust can choose to publish digests of large subtangles at
-regular intervals. I.e., a large traditional financial institution
-such as Goldman Sachs or the NYSE could build their own tangle, based
-off a large number of nodes in the global tangle, extend with a large
-number of transactions desired by their customers, then publish some
-number of tips to the global tangle, along with pointers to a
+\subsection{Cryptocurrency Does Not Take Advantage of Existing Financial Infrastructure}
+
+This is a valid criticism. Fundamentally, it makes more sense for
+existing large financial institutions to be considered untrustworthy
+but potentially valuable allies rather than enemies or competitors.
+
+We propose to allow some blockchain verification to be done off the
+global blockchain as a proof-of-work; this enables the blockchain
+protocol to scale almost indefinitely, cuts down on storage needs, and
+also helps to address environmental concerns.
+
+We note that a tangle-based cryptocurrency can be made more efficient
+by hosting the majority of nodes off of the global tangle. The idea
+here is that network actors who have built up some level of trust can
+choose to publish digests of large subtangles at regular
+intervals. I.e., a large traditional financial institution such as
+Goldman Sachs or the NYSE could build their own tangle, based off a
+large number of nodes in the global tangle, extend with a large number
+of transactions desired by their customers, then publish some number
+of tips to the global tangle, along with pointers to a
 cryptographically signed unencrypted content block that is available
 to all network participants via the modified BitTorrent protocol. The
 content block contains the tangle nodes of the transactions that
@@ -202,29 +201,31 @@ participants who choose to run such a computation. This can act as an
 auxiliary proof-of-work, while ensuring public trust in the integrity
 of the blockchain.
 
-\section{Automated Market-Making}
+\section{The Automated Market-Making Problem}
 
-We envision using an existing untethered host cryptocurrency such as
-Ethereum or IOTA to power Truth and Beauty Bux. This necesitates
-conversions between the fiat currency we are tethering to (presumably
-USD) and the host cryptocurrency. Such situations have generally been
-taken advantage of by savvy actors such as large financial
-institutions, in a way that is essentially rent-seeking. (That is,
-providing liquidity is a useful service, worthy of compensation, but
-in most situations, more value has been extracted by market makers
-than was truly required in order for them to make a healthy profit
-while serving their customers honorably.)
+We envision using an untethered host cryptocurrency (probably Thunder
+Toekn) to power Truth and Beauty Bux. This necesitates conversions
+between the fiat currency we are tethering to (presumably USD) and the
+host cryptocurrency. Such situations have generally been taken
+advantage of by savvy actors such as large financial institutions, in
+a way that is essentially rent-seeking. (That is, providing liquidity
+is a useful service, worthy of compensation, but in most situations,
+more value has been extracted by market makers than was truly required
+in order for them to make a healthy profit while serving their
+customers honorably.)
 
 We envision a distributed market-maker, in which everyone who has a
 Truth and Beauty Bux wallet containing a minimum amount of both the
 host cryptocurrency and Truth and Beauty Bux, and whose wallet has had
 the minimum amount for more than some minimum length of time (say, one
-week) will provide liquidity to the market at a globally agreed-upon
-rate. (Say, every tip provides a bid and ask price that the publisher
-of the tip must buy and sell at, and everyone else buys and sells at
-the average of prices quoted on tips that have been verified in the
-past minute, or five minutes, or maybe a Gaussian-smoothed average
-over the past hour (this would discourage quick price swings).)
+week) will provide liquidity to the market at an automatically
+determined rate. (For the sake of a very simple example protocol, say
+that every blockchain node provides a bid and ask price that the
+publisher of the tip must buy and sell at, and everyone else buys and
+sells at the average of prices quoted on nodes that have been verified
+in the past minute, or five minutes, or maybe a Gaussian-smoothed
+average over the past hour (this would discourage quick price
+swings).)
 
 The effect of all this should be that people who leave amounts of
 Truth and Beauty Bux above the required minimum receive compound
@@ -235,6 +236,19 @@ provide, and no network participant can take unfair advantage of their
 mathematical expertise or greater market knowledge to cheat the other
 network participants out of their rightful due. This seems superior in
 every respect to the current situation in the cryptocurrency markets.
+
+\subsection{Theoretical Desiderata}
+
+In this section, we lay out a research program whereby passive market
+participants (who are assumed to be less informed and less savvy) can
+get a fair share of the returns that have traditionally accrued to
+hedge funds and other financially savvy actors. Our general project
+will be to try to construct a market-making game where the Nash
+equilibrium is Pareto-optimal, and where there is no incentive for
+uninformed market participants to take an active role. If we can
+describe such a system and prove that it has the requisite properties,
+this means that we will have achieved our goal of automated
+market-making for the masses.
 
 \section{Acknowledgments}
 
